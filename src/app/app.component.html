@@ -1,0 +1,29 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark px-3" style="background-color: #76320b;" *ngIf="user">
+    <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-columns-gap" viewBox="0 0 16 16">
+                    <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"/>
+                </svg>
+                Project Name
+            </a>
+            <!-- <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
+            <button class="btn btn-link nav-item nav-link" (click)="logout()">Logout</button> -->
+        </div>
+        <div class="navbar-nav">
+            <button class="btn btn-link nav-item nav-link me-10" style="margin-right: 25px" >Customer Admin</button>
+            <div style="display: inline-flex">
+                <img style="width: 35px; height: 35px; border-radius: 50%;" src="/assets/300-1.jpg">
+                <a class="nav-item nav-link">Tomas Tuhel</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
